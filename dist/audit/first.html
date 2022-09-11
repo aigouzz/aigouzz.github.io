@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JSON.stringify的几个用法 | 前端面试</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="前端面试宝典">
+    
+    <link rel="preload" href="/assets/css/0.styles.8c3318d0.css" as="style"><link rel="preload" href="/assets/js/app.aa7920d2.js" as="script"><link rel="preload" href="/assets/js/2.3749b943.js" as="script"><link rel="preload" href="/assets/js/10.108b727a.js" as="script"><link rel="prefetch" href="/assets/js/11.440c0ee3.js"><link rel="prefetch" href="/assets/js/12.5cdab352.js"><link rel="prefetch" href="/assets/js/13.9c475e15.js"><link rel="prefetch" href="/assets/js/14.f343984d.js"><link rel="prefetch" href="/assets/js/15.4aeb402b.js"><link rel="prefetch" href="/assets/js/16.b70c21cf.js"><link rel="prefetch" href="/assets/js/17.96a4d971.js"><link rel="prefetch" href="/assets/js/18.9a39853b.js"><link rel="prefetch" href="/assets/js/19.262def97.js"><link rel="prefetch" href="/assets/js/20.14867f54.js"><link rel="prefetch" href="/assets/js/21.13f5ce90.js"><link rel="prefetch" href="/assets/js/22.2ad5df17.js"><link rel="prefetch" href="/assets/js/23.ffabd686.js"><link rel="prefetch" href="/assets/js/24.a584f0cb.js"><link rel="prefetch" href="/assets/js/25.c34fdff4.js"><link rel="prefetch" href="/assets/js/26.8a6a2b26.js"><link rel="prefetch" href="/assets/js/3.d7611600.js"><link rel="prefetch" href="/assets/js/4.fa3576a9.js"><link rel="prefetch" href="/assets/js/5.23f83df7.js"><link rel="prefetch" href="/assets/js/6.daf39397.js"><link rel="prefetch" href="/assets/js/7.ecb346f8.js"><link rel="prefetch" href="/assets/js/8.e64ed82a.js"><link rel="prefetch" href="/assets/js/9.0bc5c6c0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8c3318d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="logo.png" alt="前端面试" class="logo"> <span class="site-name can-hide">前端面试</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/vue/main" class="sidebar-heading clickable"><span>vue解析</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/react/main" class="sidebar-heading clickable"><span>react解析</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/webpack/main" class="sidebar-heading clickable"><span>webpack解析</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/audit/main" class="sidebar-heading clickable open"><span>mdn解析</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/audit/first.html" aria-current="page" class="active sidebar-link">解析特性第一部分</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/audit/second.html" class="sidebar-link">解析特性第二部分</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/calc/main" class="sidebar-heading clickable"><span>算法</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="json-stringify的几个用法"><a href="#json-stringify的几个用法" class="header-anchor">#</a> JSON.stringify的几个用法</h3> <ul><li><p>JSON.stringify(value[, replacer [, space]])<br>
+value：(必须) 可以是任意值
+replacer：(可选) 函数 (key, value) =&gt; {} 序列化过程中都要经过函数处理
+数组：只有包含在这个数组中属性名才会序列化到JSON字符串中
+null or 没有：序列化所有
+space：(可选) 指定缩进用的空白字符串</p></li> <li><p>9个特性<br>
+· no1</p> <ul><li>undefined、任意的函数以及symbol值，出现在非数组对象的属性值中时在序列化过程中会被忽略略</li> <li>undefined、任意的函数以及symbol值出现在数组中时会被转换成 null</li> <li>undefined、任意的函数以及symbol值被单独转换时，会返回 undefined<br>
+· no2</li> <li>布尔值、数字、字符串的包装对象在序列化过程中会自动转换成对应的原始值
+· no3</li> <li>所有以symbol为属性键的属性都会被完全忽略掉，即便 replacer 参数中强制指定包含了它们
+· no4</li> <li>NaN 和 Infinity 格式的数值及 null 都会被当做 null<br>
+· no5</li> <li>转换值如果有 toJSON() 方法，该方法定义什么值将被序列化<br>
+· no6</li> <li>Date 日期调用了 toJSON() 将其转换为了 string 字符串（同Date.toISOString()），因此会被当做字符串处理<br>
+· no7</li> <li>对包含循环引用的对象（对象之间相互引用，形成无限循环）执行此方法，会抛出错误<br>
+· no8</li> <li>其他类型的对象，包括 Map/Set/WeakMap/WeakSet，仅会序列化可枚举的属性<br>
+· no9</li> <li>当尝试去转换 BigInt 类型的值会抛出错误</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/webpack/plugins.html" class="prev">
+        plugins解析
+      </a></span> <span class="next"><a href="/audit/second.html">
+        解析特性第二部分
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.aa7920d2.js" defer></script><script src="/assets/js/2.3749b943.js" defer></script><script src="/assets/js/10.108b727a.js" defer></script>
+  </body>
+</html>
