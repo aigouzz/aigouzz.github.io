@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue3_init_music"]=self["webpackChunkvue3_init_music"]||[]).push([[204],{7204:function(e,n,c){c.r(n),c.d(n,{default:function(){return o}});var r=c(3396);const s={class:"index-search"};function u(e,n,c,u,i,t){return(0,r.wg)(),(0,r.iD)("div",s,"search")}var i={render(e){console.log(e)}},t=c(89);const a=(0,t.Z)(i,[["render",u],["__scopeId","data-v-633f39f2"]]);var o=a}}]);
+//# sourceMappingURL=204.d552bdc8.js.map
