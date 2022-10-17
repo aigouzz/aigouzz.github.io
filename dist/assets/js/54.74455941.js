@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[54],{577:function(t,n,s){"use strict";s.r(n);var e=s(10),i=Object(e.a)({},(function(){var t=this._self._c;return t("div",[t("font",{attrs:{size:"3",face:"fantasy"}},[this._v("MIT Licensed | Copyright © 2022-present gxc")]),this._v(" "),t("img",{attrs:{src:"logo.png"}})],1)}),[],!1,null,null,null);n.default=i.exports}}]);
