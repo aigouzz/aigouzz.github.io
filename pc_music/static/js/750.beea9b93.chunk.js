@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_react_app=self.webpackChunkmy_react_app||[]).push([[750],{82750:function(e,a,r){r.r(a);var s=r(73090),t=r(69193);a.default=(0,s.memo)((function(){return(0,t.jsx)("div",{className:"w980",style:{height:"1200px",border:"solid 1px #d3d3d3"},children:"JMDjradio"})}))}}]);
+//# sourceMappingURL=750.beea9b93.chunk.js.map

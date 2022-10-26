@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_react_app=self.webpackChunkmy_react_app||[]).push([[547],{547:function(e,r,s){s.r(r);var t=s(73090),a=s(69193);r.default=(0,t.memo)((function(){return(0,a.jsx)("div",{className:"w980",style:{height:"1200px",border:"solid 1px #d3d3d3"},children:(0,a.jsx)("h2",{children:"Artist"})})}))}}]);
+//# sourceMappingURL=547.24075970.chunk.js.map

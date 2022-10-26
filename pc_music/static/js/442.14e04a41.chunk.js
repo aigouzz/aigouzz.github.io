@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_react_app=self.webpackChunkmy_react_app||[]).push([[442],{6442:function(e,c,n){n.r(c);var r=n(73090),u=n(69193);c.default=(0,r.memo)((function(){return(0,u.jsx)("div",{children:(0,u.jsx)("h2",{children:"JMAlbum"})})}))}}]);
+//# sourceMappingURL=442.14e04a41.chunk.js.map

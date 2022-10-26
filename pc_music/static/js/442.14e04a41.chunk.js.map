@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/442.14e04a41.chunk.js","mappings":"kJAEA,WAAeA,EAAAA,EAAAA,OAAK,WAClB,OACE,0BACE,qCAGN,G","sources":["pages/search/child-pages/album/index.js"],"sourcesContent":["import React, { memo } from 'react'\n\nexport default memo(function JMAlbum() {\n  return (\n    <div>\n      <h2>JMAlbum</h2>\n    </div>\n  )\n})\n"],"names":["memo"],"sourceRoot":""}
