@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue3_init_h5_1"]=self["webpackChunkvue3_init_h5_1"]||[]).push([[3319],{3319:function(e,n,r){r.r(n),r.d(n,{default:function(){return s}});var t=r(4317);function u(e,n,r,u,c,i){const a=(0,t.up)("router-view");return(0,t.wg)(),(0,t.j4)(a,{class:"router-view"})}var c={name:"indexApp"},i=r(8738);const a=(0,i.Z)(c,[["render",u],["__scopeId","data-v-6c70fb9d"]]);var s=a}}]);
+//# sourceMappingURL=3319.e4c240d4.js.map
